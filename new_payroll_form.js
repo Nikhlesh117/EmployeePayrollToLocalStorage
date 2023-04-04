@@ -22,12 +22,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     salary.addEventListener('input', function () {
         output.textContent = salary.value;
     });
-}); 
+});
 /*UC 3 – On Save Create Employee Payroll Object*/
 const save = () => {
     try {
-        employeePayrollData = createEmployeePayroll();
-        createAndUpdateLocalStorage(employeePayrollData);
+        let employeePayrollData = createEmployeePayroll();
+        createAndUpdateStorage(employeePayrollData);
     }
     catch (e) {
         return;
@@ -68,4 +68,17 @@ const getInputValueById = (id) => {
 const getInputElementValue = (id) => {
     let value = document.getElement(id).value;
     return value;
+}
+/** UC-04---save employee object into local storage */
+function createAndUpdateStorage(employeePayrollData) {
+    let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+    if (employeePayrollList != undefined) {
+        employeePayrollList.push(employeePayrollData);
+    }
+    else {
+        employeePayrollList = [employeePayrollData];
+    }
+    alert(employeePayrollList.toString());
+    localStorage.setItem('EmployeePayrollList', JSON.stringify(employeePayrollList));
+
 }
