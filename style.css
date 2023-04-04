@@ -1,51 +1,50 @@
-/* UC 1 */
-
-html body{
+html body {
     margin: 0;
     height: 100%;
 }
 
-.header{
+.header {
     padding: 15px 0;
     background-color: #ffffff;
 }
 
-.header-content{
+.header-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border:0px solid green;
+    border: 0px solid green;
 }
 
-.logo-content{
+.logo-content {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border:0px solid green;
+    border: 0px solid green;
     width: 80%;
 }
 
-.logo-content-img{
-    border:solid 0px #42515f;
+.logo-content-img {
+    border: solid 0px #42515f;
 }
 
-.emp-text{
-    font:normal normal bold 20px/25px Montserrat;
+.emp-text {
+    font: normal normal bold 20px/25px Montserrat;
     font-family: "Montserrat", sans-serif;
     letter-spacing: 0px;
     color: #82a70c;
     text-transform: capitalize;
 }
 
-.emp-payroll{
+.emp-payroll {
     color: #42515f;
 
 }
 
-*{
+* {
     box-sizing: border-box;
 }
+
 /*UC 2*/
 .form-content {
     min-height: calc(100% - 80px);
@@ -61,10 +60,11 @@ html body{
     padding: 44px 60px;
     background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #f5f5f5;
-    border:1px solid #f5f5f5;
+    border: 1px solid #f5f5f5;
     border-radius: 8px;
     opacity: 1;
 }
+
 .form-head {
     font: normal normal bold 24px/37px Roboto;
     letter-spacing: 0px;
@@ -78,7 +78,8 @@ html body{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-    align-items: stretch;;
+    align-items: stretch;
+    ;
     border: 0px solid green;
 }
 
@@ -97,6 +98,7 @@ label {
     opacity: 1;
     font-family: Roboto;
 }
+
 .input {
     width: 100%;
     padding: 12px;
@@ -104,23 +106,25 @@ label {
     border-radius: 4px;
     resize: vertical;
 }
+
 /*UC 3*/
-.profie-radio-content{
+.profie-radio-content {
     display: flex;
     flex-direction: row;
 }
 
-.profile-radio-content > label{
+.profile-radio-content>label {
     /*display: flex; */
     flex-direction: row;
     align-items: center;
 }
 
-.profile{
+.profile {
     width: 40px;
     border-radius: 50%;
     margin-left: 12px;
 }
+
 /*UC 5*/
 select {
     padding: 12px;
@@ -132,6 +136,7 @@ select {
     color: #42515f;
     background-color: transparent;
 }
+
 /*UC 6*/
 .buttonParent {
     display: flex;
@@ -168,10 +173,19 @@ select {
     text-align: center;
 }
 
+/*UC-UC 2 – On Document Load Set Event Listeners*/
+error-output {
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}
+
 @media only screen and (max-width: 960px) {
     .cancelButton {
         margin-left: 0px;
     }
+
     .form {
         width: 85%;
         padding: 44px 20px;
@@ -182,15 +196,19 @@ select {
     .form {
         margin-top: 10px;
     }
+
     .row {
         flex-direction: column;
     }
+
     .uploadButton {
         justify-content: flex-start;
     }
+
     .profile-radio-button {
         flex-flow: wrap;
     }
+
     .submit-reset {
         width: 100%;
         display: flex;
@@ -199,9 +217,11 @@ select {
         justify-content: space-between;
         margin-bottom: 20px;
     }
+
     .submitButton {
         margin: 0;
     }
+
     .buttonParent {
         flex-direction: column-reverse;
         align-items: flex-start;
